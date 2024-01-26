@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.video-container {
+    position: relative;
+    transform: translateY(-20%);
+    width: 1280px;
+    height: 720px;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    /*padding: 5px;*/
+}
+
+.video-controls button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.video-controls button:hover {
+    background-color: white;
+    color: black;
+}
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.progress {
+    background-color: #333;
+    width: 0;
+    height: 100%;
+}
+
+.scrubber {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+#myVideo {
+     display: none;
+     width: 1px;
+     height: 1px;
+ }
+
+#videoCanvas {
+    width: 1280px;
+    height: 720px;
+}
+.subtitle-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.subtitle-controls textarea {
+    width: 50%;
+    height: 350px;
+}
+
+.subtitle-controls button {
+    margin-left: 10px;
+}

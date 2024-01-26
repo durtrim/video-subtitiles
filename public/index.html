@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Display</title>
+    <link href="css/base.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="video-container">
+    <canvas id="videoCanvas"></canvas>
+    <div class="video-controls">
+        <button id="playButton">Play</button>
+        <button id="pauseButton">Pause</button>
+        <div class="progress-bar" id="progressBar">
+            <div class="progress" id="progress"></div>
+            <div class="scrubber" id="scrubber"></div>
+        </div>
+    </div>
+    <div class="subtitle-controls">
+        <label for="subtitleText"> Text: </label>
+        <textarea id="subtitleText" placeholder="Enter subtitle text here" >
+[
+    {
+        "start": 5,
+        "end": 10,
+        "text": "First",
+        "x": 100,
+        "y": 350
+    },
+    {
+        "start": 10,
+        "end": 15,
+        "text": "Second",
+        "x": 200,
+        "y": 500
+    },
+    {
+        "start": 2,
+        "end": 12,
+        "text": "Some title",
+        "x": 600,
+        "y": 150
+    }
+]
+        </textarea>
+        <button id="addSubtitle">Add Subtitle</button>
+
+    </div>
+</div>
+
+
+<video id="myVideo" controls>
+    <source src="/video/sample.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<script src="js/main.js"></script>
+</body>
+</html>
